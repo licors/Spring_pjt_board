@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.practice.spring_pjt_board.dao.IDao">
+	<select id="listDao" resultType="com.practice.spring_pjt_board.dto.ContentDto">
+		SELECT * FROM spring_board ORDER BY BID DESC
+	</select>
+	
+	
+	<insert id="writeDao">
+		INSERT INTO spring_board (WRITER, CONTENT) VALUES (#{param1}, #{param2})
+	</insert>
+	
+	
+	<delete id="deleteDao">
+		DELETE FROM spring_board WHERE BID = #{param1}
+	</delete>
+	
+	
+</mapper>
