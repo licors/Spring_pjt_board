@@ -18,5 +18,8 @@
 		DELETE FROM spring_board WHERE BID = #{param1}
 	</delete>
 	
+	<select id="viewDao" resultType="com.practice.spring_pjt_board.dto.ContentDto">
+		SELECT * FROM spring_board WHERE bid = #{param1}
+	</select>
 	
 </mapper>
